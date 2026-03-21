@@ -1,3 +1,4 @@
+import copy
 #Type of copy 
 #1. General copy 
 #2. Shallow copy
@@ -37,3 +38,21 @@ ur[1] = 9+7j
 print("Value of sh: ", sh)
 print("Value of ur: ", ur)
 #Now modification done only in ur not in sh because both have different memory addresses.
+
+ab = [10,9.56,'Hello',[7j,True,3]]
+cd = ab.copy()
+cd[3][1] = False
+print("Value of ab: ", ab)
+print("Value of cd: ", cd)
+#Here modification done in cd is also reflected in ab because both have same memory address for the nested list.
+#Modification done with the respect to the main memory layer of source variable or destination variable will not affect each other. But modification done with respect to Nested collection will affect both of them.
+
+#Deep copy will copy the entire value space of the one variable to another.
+#syntax: import copy
+#destination variable = copy.deepcopy(source_variable)
+
+abc = [10,9.56,'Hello',[7j,True,3]]
+cde = copy.deepcopy(abc)
+print(id(abc))
+print(id(cde))
+#Here both have different memory addresses.
