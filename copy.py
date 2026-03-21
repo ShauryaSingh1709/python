@@ -56,3 +56,7 @@ cde = copy.deepcopy(abc)
 print(id(abc))
 print(id(cde))
 #Here both have different memory addresses.
+#Modification done will not affect any of the variable because both have different memory addresses for the main memory layer and nested collection as well.
+cde[3][1] = False
+print("Value of abc: ", abc)
+print("Value of cde: ", cde)
