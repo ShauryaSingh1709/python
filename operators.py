@@ -192,4 +192,3 @@ print("Power of aa and aa: ", aa ** aa)
 #Greater than or equal to operator (>=) will check if the value of left operand is greater than or equal to the value of right operand and return True or False accordingly.
 #In case of multiple value data types it will compare the first value of both operand and if
 
-
