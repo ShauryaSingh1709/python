@@ -40,3 +40,4 @@ def outer():
     inner()
     print(a)
 outer()
+print(a) #It will give an error in local variable but if we use global instead of nonlocal then we will get output 10,50,50 and 50 because we have used global keyword to indicate that we want to use the global variable a inside the function inner().
