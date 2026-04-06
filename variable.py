@@ -1,0 +1,30 @@
+# a = 10
+# print(a)
+# def shaurya():
+#     a = 20
+#     print(a)
+# shaurya()
+# print(a)
+#Here we have output 10,20,10 because the variable a is defined in the global scope and local scope. The local variable a is only accessible within the function shaurya() and does not affect the global variable a.
+# a = 10
+# print(a)
+# def shaurya():
+#     global a
+#     a = 20
+#     print(a)
+# shaurya()
+# print(a)
+#Here we have output 10,20,20 because we have used the global keyword to indicate that we want to use the global variable a inside the function shaurya(). Therefore, when we assign a new value to a inside the function, it modifies the global variable a, which is reflected in the final print statement.
+
+#Global variable is the variable that define inside in the main space and can be accessed from anywhere in the program.
+
+#Local variable is the variable that define inside a function and can be accessed only within that function.
+def outer():
+    a = 10
+    print(a)
+    def inner():
+        a = 50
+        print(a)
+    inner()
+    print(a)
+outer()
