@@ -19,10 +19,22 @@
 #Global variable is the variable that define inside in the main space and can be accessed from anywhere in the program.
 
 #Local variable is the variable that define inside a function and can be accessed only within that function.
+# def outer():
+#     a = 10
+#     print(a)
+#     def inner():
+#         a = 50
+#         print(a)
+#     inner()
+#     print(a)
+# outer()
+
+#To modify a local variable inside a nested function, we can use the nonlocal keyword.
 def outer():
     a = 10
     print(a)
     def inner():
+        nonlocal a
         a = 50
         print(a)
     inner()
