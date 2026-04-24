@@ -47,4 +47,4 @@ print(S1.color) #Output :- Red
 print(Smartphone.ram, Smartphone.rom, Smartphone.color) #Output :- 8 256 White
 print(S1.ram, S1.rom, S1.color) #Output :- 8 256 Red
 print(S2.ram, S2.rom, S2.color) #Output :- 8 256 White
-    
+#If we chnage the property of class then it will change for all the objects but if we change the property of object then it will change only for that object.
