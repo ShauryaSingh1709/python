@@ -43,14 +43,14 @@
 # print(a) #It will give an error in local variable but if we use global instead of nonlocal then we will get output 10,50,50 and 50 because we have used global keyword to indicate that we want to use the global variable a inside the function inner().
 
 #WAP to extract vowels present inside an string and count of vowels.
-def vowels_count(string):
-    vowels = 'aeiouAEIOU'
-    count = 0
-    for char in string:
-        if char in vowels:
-            print(char,end='')
-            count += 1
-    return count
-string = input("Enter a string: ")
-print("Extracted Vowels in the string:", end=' ')
-print("\nNumber of vowels:", vowels_count(string))
+# def vowels_count(string):
+#     vowels = 'aeiouAEIOU'
+#     count = 0
+#     for char in string:
+#         if char in vowels:
+#             print(char,end='')
+#             count += 1
+#     return count
+# string = input("Enter a string: ")
+# print("Extracted Vowels in the string:", end=' ')
+# print("\nNumber of vowels:", vowels_count(string))
