@@ -53,7 +53,7 @@ print(demo.a) #Output :- 10
 print(Creation.b) #Output :- 20
 print(demo.b) #Output :- 20
 
-Class Creation:
+class Creation:
     a = 10
     b = 20
 demo1 = Creation()
@@ -134,3 +134,45 @@ print(cus2.bname, cus2.loc, cus2.Manager) #Output :- SBI Mumbai Aditya
 
 #Modification done with respect to object will not affect the class and other objects.
 #Reason:- Class are not depending on the objects.
+
+#States or Property :- 
+# The data and information stored inside a class/object is known as states or property of class/object.
+#                                             OR
+# The variable or functionalities stored inside the class are called as states.
+
+#There are 2 types of states or property :-
+#1. Generic state/ class state/ static state.
+#2. Specific state/ object state.
+#-- These are the properties which will be common for every object.
+#1. Generic state :- The Properties which are common for all the object are termed as generic state.
+#Example for generic state :-
+class School:
+    sname = "CGC"
+    loc = "Chandigarh"
+    principal = "Aditya"
+    time = "12:30-4:30"
+st1 = School()
+st2 = School()
+print(School.sname, School.loc, School.principal, School.time) #Output :- CGC Chandigarh Aditya 12:30-4:30
+print(st1.sname, st1.loc, st1.principal, st1.time) #Output :- CGC Chandigarh Aditya 12:30-4:30
+print(st2.sname, st2.loc, st2.principal, st2.time) #Output :- CGC Chandigarh Aditya 12:30-4:30
+#2. Object state or Specific state ;- The properties which will we create outside the class after the class creation is called as specific or object state.
+#Example for object state :-
+class School:
+    sname = "DAV"
+    loc = "Bangalore"
+    principal = "Joseph Vijay"
+    time = "9:00am to 12:00pm"
+st1 = School()
+st1.name = "Shaurya"
+st1.id = 23
+st1.age = 20
+st1.bg = "AB+"
+
+st2 = School()
+st2.name = "Raj"
+st2.id = 24
+st2.age = 18
+st2.bg = "O+"
+print(st1.name, st1.id, st1.age, st1.bg, st1.sname, st1.loc, st1.principal, st1.time) #Output :- Shaurya 23 20 AB+ DAV Bangalore Joseph Vijay 9:00am to 12:00pm
+print(st2.name, st2.id, st2.age, st2.bg, st2.sname, st2.loc, st2.principal, st2.time) #Output :- Raj 24 18 O+ DAV Bangalore Joseph Vijay 9:00am to 12:00pm

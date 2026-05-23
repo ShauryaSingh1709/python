@@ -687,9 +687,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 273.2911109679121,
-			"y": -1489.7260608981608,
-			"z": 0.5660413790447637,
+			"x": 56.764830651825974,
+			"y": -226.2192066954993,
+			"z": 0.7883898544065573,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -1270,7 +1270,7 @@
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:1HCVqDP1wbF_PqWNBEGd3"
+				"shape:pLkBTsUJn6fDlV__nc4e1"
 			],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
@@ -3257,14 +3257,11 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {
-				"tldraw:color": "grey",
-				"tldraw:geo": "rectangle"
-			},
+			"stylesForNextShape": {},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "cross",
+				"type": "grabbing",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -3369,8 +3366,8 @@
 					"a2EfStsV": {
 						"id": "a2EfStsV",
 						"index": "a2EfStsV",
-						"x": 8,
-						"y": 186.39996337890625
+						"x": 6.985366499401948,
+						"y": 181.32633137103255
 					}
 				},
 				"scale": 1
