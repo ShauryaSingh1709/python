@@ -20,7 +20,46 @@
 #class classname:
 #classname should be in capital letter but it's not mandatory.
 
+#Types of class :-
+#1. User defined class :- It is a class which is defined or created by the user.
+#2. Built in class(Inbuilt class) :- It is a class which is predefined by the python.
 
+#Example of user defined class :-
+class Creation:
+    a = 10
+    b = 20
+demo = Creation()
+print(type(demo)) #Output :- <class '__main__.Creation'>
+#Here __main__ is representing that class is created by the user or we can say it is a user defined class.
+#Memory allocation :- 
+#Method area :- It will be created into two parts :-
+#1. Main Space :- Creation [0X11] and demo [0X22]
+#2. Method Area :- Key and Value pair will be stored in the method area.
+#key = a and b #for class Creation
+#value = 10 (A1) and 20 (A2) #for class Creation and here A1 and A2 are refrence 
+#Key = a and b #for object demo
+#Value = A1 and A2 #for object demo
+
+#Whenever we want to access the values from the class or object we have to use a syntax
+#For class:- Cname.var
+#For object;- obj.var
+
+#Access the values of class and object :-
+print(Creation.a) #Output :- 10
+print(demo.a) #Output :- 10
+print(Creation.b) #Output :- 20
+print(demo.b) #Output :- 20
+
+
+Class Creation:
+    a = 10
+    b = 20
+demo1 = Creation()
+demo2 = Creation()
+print(Creation.a, Creation.b) #Output :- 10 20
+print(demo1.a, demo1.b) #Output :- 10 20
+print(demo2.a, demo2.b) #Output :- 10 20
+    
 
 # class Shaurya:
     #Here we will define the properties and functionality of the class.
@@ -28,7 +67,7 @@
 #Object :-
 #Object is copy or instance of a class.
 #Syntax of object :-
-#objectname = classname()
+#objectname = Classname()
 # shau = Shaurya() #Here shau is the object of class Shaurya.
 
 #Example of class and object :-
