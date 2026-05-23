@@ -1,6 +1,17 @@
-#OOPs stands for Object Oriented Programming System.
+#OOPs stands for Object Oriented Programming System/Structure.
 #Class is a blueprint of an object.
 #Object is copy or insstance of a class.
+
+#Advantages of OOPs :-
+#1. Avoid repetition of code.
+#2. It is easy to maintain and modify the code.
+#3. It is easy to reuse the code.
+#4. It is easy to test the code.
+#5. It is easy to debug the code.
+#6. Make code easier to understand and use.
+#7. We can organize the code properly.
+#8. Solving real world problems.
+#9. It is way of programming , where we have to create class and objects.
 
 #Class :- 
 # 1. Properties(Represented by variables)
@@ -8,7 +19,7 @@
 #syntax of class :-
 #class classname:
 #classname should be in capital letter but it's not mandatory.
-# import shau
+
 
 
 # class Shaurya:
