@@ -176,3 +176,60 @@ st2.age = 18
 st2.bg = "O+"
 print(st1.name, st1.id, st1.age, st1.bg, st1.sname, st1.loc, st1.principal, st1.time) #Output :- Shaurya 23 20 AB+ DAV Bangalore Joseph Vijay 9:00am to 12:00pm
 print(st2.name, st2.id, st2.age, st2.bg, st2.sname, st2.loc, st2.principal, st2.time) #Output :- Raj 24 18 O+ DAV Bangalore Joseph Vijay 9:00am to 12:00pm
+
+
+#Difference between method and function :-
+#Function which we declare inside the class is called as methods.
+#If we declare the function outside the class then it is called as function.
+
+#<--example of Function-->
+def add():
+    print("Hello")
+#add() is a function because it is declared outside the class.
+
+#<--example of method-->
+class Demo:
+    def show():
+        print("Hello")
+#show() is a method because it is declared inside the class.
+
+#Constructor or __init__ method or Initialisation :-
+#It runs automatically when an object is created.
+#It is used to initialize the member of the object.
+#No need of calling the method by default it is execute when we create an object.
+#self is the mandatory argument to pass for the __init__ method.
+#We can pass argument in the object creation only if there is __init__ method present inside the class.
+#__init__ is the constructor method in python.
+#For __init__ method, passing self is mandatory to store the address of the object.
+#Syntax for constructor method :-
+#class Cname:
+    #Block of code
+    #def __init__(self, arg1, arg2, arg3,......argn):
+        # self.arg1 = arg1
+        # self.arg2 = arg2
+        # self.arg3 = arg3
+        # .
+        # .
+        # .
+        # .
+        # .
+        # .
+        # .
+        # self.argn = argn
+#Obj_name = Cname(arg1, arg2, arg3,.....argn)
+
+class School:
+    sname = "Carmel"
+    loc = "Bangalore"
+    principal = "Shaurya"
+    timing = "9:00am to 12:00pm"
+    def __init__(self, name, sid, age, bg):
+        self.name = name
+        self.sid = sid
+        self.age = age
+        self.bg = bg
+st1 = School("Akanksha", 16, 24, "B+")
+st2 = School("Alavya", 17, 20, "AB+")
+print(st1.name, st1.sid, st1.age, st1.bg, st1.sname, st1.loc, st1.principal, st1.timing) #Output :- Akanksha 16 24 B+ Carmel Bangalore Shaurya 9:00am to 12:00pm
+print(st2.name, st2.sid, st2.age, st2.bg, st2.sname, st2.loc, st2.principal, st2.timing) #Output :- Alavya 17 20 AB+ Carmel Bangalore Shaurya 9:00am to 12:00pm
+    
