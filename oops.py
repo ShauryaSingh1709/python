@@ -25,6 +25,9 @@
 #2. Built in class(Inbuilt class) :- It is a class which is predefined by the python.
 
 #Example of user defined class :-
+from pyclbr import Class
+
+
 class Creation:
     a = 10
     b = 20
@@ -49,7 +52,6 @@ print(Creation.a) #Output :- 10
 print(demo.a) #Output :- 10
 print(Creation.b) #Output :- 20
 print(demo.b) #Output :- 20
-
 
 Class Creation:
     a = 10
@@ -98,3 +100,37 @@ print(Smartphone.ram, Smartphone.rom, Smartphone.color) #Output :- 8 256 White
 print(S1.ram, S1.rom, S1.color) #Output :- 8 256 Red
 print(S2.ram, S2.rom, S2.color) #Output :- 8 256 White
 #If we chnage the property of class then it will change for all the objects but if we change the property of object then it will change only for that object.
+
+
+#Actual Program for Bank Data :-
+class Bank:
+    bname = "SBI"
+    loc = "Bangalore"
+    Manager = "Aditya"
+cus1 = Bank()
+cus2 = Bank()
+print(Bank.bname, Bank.loc, Bank.Manager) #Output :- SBI Bangalore Aditya
+print(cus1.bname, cus1.loc, cus1.Manager) #Output :- SBI Bangalore Aditya
+print(cus2.bname, cus2.loc, cus2.Manager) #Output :- SBI Bangalore Aditya
+#Modification of class property :-
+Bank.loc = "Chandigarh"
+print(Bank.bname, Bank.loc, Bank.Manager) #Output :- SBI Chandigarh Aditya
+print(cus1.bname, cus1.loc, cus1.Manager) #Output :- SBI Chandigarh Aditya
+print(cus2.bname, cus2.loc, cus2.Manager) #Output :- SBI Chandigarh Aditya
+#Modification of object property :-
+cus1.loc = "Jharkhand"
+print(Bank.bname, Bank.loc, Bank.Manager) #Output :- SBI Chandigarh Aditya
+print(cus1.bname, cus1.loc, cus1.Manager) #Output :- SBI Jharkhand Aditya
+print(cus2.bname, cus2.loc, cus2.Manager) #Output :- SBI Chandigarh Aditya
+
+cus2.loc = "Mumbai"
+print(Bank.bname, Bank.loc, Bank.Manager) #Output :- SBI Chandigarh Aditya  
+print(cus1.bname, cus1.loc, cus1.Manager) #Output :- SBI Jharkhand Aditya
+print(cus2.bname, cus2.loc, cus2.Manager) #Output :- SBI Mumbai Aditya
+
+#Modification done with respect to class will affect all the objects.
+#Reason:- Objects are instance/Copy of the class.
+
+
+#Modification done with respect to object will not affect the class and other objects.
+#Reason:- Class are not depending on the objects.
