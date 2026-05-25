@@ -306,3 +306,104 @@ st1 = School("Akanksha", 16, 24, "B+")
 st1.display() #Output :- Akanksha 16 24 B+ SHA Gorakhpur Shaurya 9:00am to 4:30pm
 st1.ch_age(25)
 st1.display() #Output :- Akanksha 16 25 B+ SHA Gorakhpur Shaurya 9:00am to 4:30pm
+
+#Prog to change employee because old employee is fired and new employee is hired in the company :-
+class Company:
+    cname = "Capgemini"
+    loc = "Bangalore"
+    ceo = "Alavya"
+    def __init__(self, ename, eid, age, bg):
+        self.ename = ename
+        self.eid = eid
+        self.age = age
+        self.bg = bg
+    def display(self):
+        print(self.ename, self.eid, self.age, self.bg, self.cname, self.loc, self.ceo)
+    def ch_ename(self, new):
+        self.ename = new
+    def ch_age(self, new):
+        self.age = new
+emp1 = Company("Shaurya", 23, 20, "AB+")
+emp1.display() #Output :- Shaurya 23 20 AB+ Capgemini Bangalore Alavya
+emp1.ch_ename("Akanksha")
+emp1.display() #Output :- Akanksha 23 20 AB+ Capgemini Bangalore Alavya
+emp1.ch_age(24)
+emp1.display() #Output :- Akanksha 23 24 AB+ Capgemini Bangalore Alavya
+
+#2. Class Method :- It is used to access and modify the class member.
+#We need to use 'cls' as an argument to store the address of the class members. And it is compulsory to use @classmethod
+#Syntax for class method :-
+#class Cname:
+    #Block of code
+    #@classmethod                  #To access the class member
+    #def mname(cls,args):          #To access the class member
+        #statement block           #To access the class member
+        #@classmethod               #To modify the class member
+        #def mname(cls,new):        #To modify the class member
+            #cls.var = new          #To modify the class member
+#obj = Cname(val)
+#Cname.mname(val)
+        
+#Class method example :-
+class School:
+    sname = "ABC"
+    loc = "Paris"
+    principal = "Alavya"
+    timing = "8:00am to 1:00pm"
+    @classmethod
+    def display(cls):
+        print(cls.sname, cls.loc, cls.principal, cls.timing)
+    @classmethod
+    def ch_timing(cls, new, change):
+        cls.timing = new
+        cls.loc = change
+st1 = School()
+School.display() #Output :- ABC Paris Alavya 8:00am to 1:00pm
+School.ch_timing("8:30am to 1:30pm", "London")
+School.display() #Output :- ABC London Alavya 8:30am to 1:30pm
+
+#Class method example for company :-
+class Company:
+    cname = "Google"
+    loc = "California"
+    ceo = "Sundar Pichai"
+    @classmethod
+    def display(cls):
+        print(cls.cname, cls.loc, cls.ceo)
+    @classmethod
+    def ch_ceo(cls, new):
+        cls.ceo = new
+emp1 = Company()
+Company.display() #Output :- Google California Sundar Pichai
+Company.ch_ceo("Shaurya")
+Company.display() #Output :- Google California Shaurya
+
+#Bank example for class method :-
+class Bank:
+    bname = "HDFC"
+    loc = "Mumbai"
+    manager = "Shaurya"
+    @classmethod
+    def display(cls):
+        print(cls.bname, cls.loc, cls.manager)
+    @classmethod
+    def ch_manager(cls, new):
+        cls.manager = new
+cus1 = Bank()
+Bank.display() #Output :- HDFC Mumbai Shaurya
+Bank.ch_manager("Akanksha")
+Bank.display() #Output :- HDFC Mumbai Akanksha
+
+#Bank example for object method :-
+class Bank:
+    bname = "HDFC"
+    loc = "Mumbai"
+    manager = "Shaurya"
+    def display(self):
+        print(self.bname, self.loc, self.manager)
+    def ch_manager(self, new):
+        self.manager = new
+cus1 = Bank()
+cus1.display() #Output :- HDFC Mumbai Shaurya
+cus1.ch_manager("Akanksha")
+cus1.display() #Output :- HDFC Mumbai Akanksha
