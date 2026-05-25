@@ -233,3 +233,76 @@ st2 = School("Alavya", 17, 20, "AB+")
 print(st1.name, st1.sid, st1.age, st1.bg, st1.sname, st1.loc, st1.principal, st1.timing) #Output :- Akanksha 16 24 B+ Carmel Bangalore Shaurya 9:00am to 12:00pm
 print(st2.name, st2.sid, st2.age, st2.bg, st2.sname, st2.loc, st2.principal, st2.timing) #Output :- Alavya 17 20 AB+ Carmel Bangalore Shaurya 9:00am to 12:00pm
     
+    
+#Example Question for constructor :-
+#WAP to create a company having 3 class members and 1 object with 4 object member.
+class Company:
+    cname = "Capgemini"
+    loc = "Bangalore"
+    ceo = "Alavya"
+    def __init__(self, ename, eid, age, bg):
+        self.ename = ename
+        self.eid = eid
+        self.age = age
+        self.bg = bg
+emp1 = Company("Shaurya", 23, 20, "AB+")
+print(emp1.ename, emp1.eid, emp1.age, emp1.bg, emp1.cname, emp1.loc, emp1.ceo) #Output :- Shaurya 23 20 AB+ Capgemini Bangalore Alavya
+
+#WAP where class is Car and properties are brand, color, HP and Price make 4 object with 4 object member with different property.
+class Car:
+    brand = "Ferrari"
+    color = "Black"
+    HP = 500
+    price = 1000000
+    def __init__(self, name, model, year, color):
+        self.name = name
+        self.model = model
+        self.year = year
+        self.color = color
+car1 = Car("Scuderia Ferrari", 500, 2022, "Red")
+car2 = Car("Forza Ferrari", 600, 2023, "Yellow")
+car3 = Car("Ferrari Enzo", 400, 2021, "White")
+car4 = Car("Ferrari F8", 300, 2020, "Blue")
+print(car1.name, car1.model, car1.year, car1.color, car1.brand, car1.HP, car1.price) #Output :- Scuderia Ferrari 500 2022 Red Ferrari 500 1000000
+print(car2.name, car2.model, car2.year, car2.color, car2.brand, car2.HP, car2.price) #Output :- Forza Ferrari 600 2023 Yellow Ferrari 500 1000000
+print(car3.name, car3.model, car3.year, car3.color, car3.brand, car3.HP, car3.price) #Output :- Ferrari Enzo 400 2021 White Ferrari 500 1000000
+print(car4.name, car4.model, car4.year, car4.color, car4.brand, car4.HP, car4.price) #Output :- Ferrari F8 300 2020 Blue Ferrari 500 1000000
+
+#Method :-
+#1. Object Method
+#2. Class Method
+#3. Static Method
+
+#Object Method :- The Method which is used to perform modification and some operation on the object member is called as object method.
+#They are used to access and modify the object member.
+#It is complousory to pass self to store the address of the object.
+#Syntax for object method :-
+#class Cname:
+    #Block of code
+    #def methodname(self): #To access
+        #print(args)       #To access
+    #def methodname(self.new):     #To modify
+        #self.var = new            #To modify
+#obj = Cname(val1,val2,.....valn)
+#obj.methodname()
+    
+    
+#Example of object method :-
+class School:
+    sname = "SHA"
+    loc = "Gorakhpur"
+    principal = "Shaurya"
+    timing = "9:00am to 4:30pm"
+    def __init__(self, name, sid, age, bg):
+        self.name = name
+        self.sid = sid
+        self.age = age
+        self.bg = bg
+    def display(self):
+        print(self.name, self.sid, self.age, self.bg, self.sname, self.loc, self.principal, self.timing)
+    def ch_age(self, new):
+        self.age = new
+st1 = School("Akanksha", 16, 24, "B+")
+st1.display() #Output :- Akanksha 16 24 B+ SHA Gorakhpur Shaurya 9:00am to 4:30pm
+st1.ch_age(25)
+st1.display() #Output :- Akanksha 16 25 B+ SHA Gorakhpur Shaurya 9:00am to 4:30pm
