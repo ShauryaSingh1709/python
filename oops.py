@@ -407,3 +407,61 @@ cus1 = Bank()
 cus1.display() #Output :- HDFC Mumbai Shaurya
 cus1.ch_manager("Akanksha")
 cus1.display() #Output :- HDFC Mumbai Akanksha
+
+#Bank example for both class method and object method :-
+class Bank:
+    bname = "HDFC"
+    loc = "Mumbai"
+    manager = "Shaurya"
+    def display(self):
+        print(self.bname, self.loc, self.manager)
+    def ch_manager(self, new):
+        self.manager = new
+    @classmethod
+    def display(cls):
+        print(cls.bname, cls.loc, cls.manager)
+    @classmethod
+    def ch_loc(cls, new):
+        cls.loc = new
+cus1 = Bank()
+cus1.display() #Output :- HDFC Mumbai Shaurya
+cus1.ch_manager("Akanksha")
+cus1.display() #Output :- HDFC Mumbai Akanksha
+cus1.ch_loc("Delhi")
+cus1.display() #Output :- HDFC Delhi Akanksha
+
+
+#Static Method :- It is neither belongs to class member nor belongs to object address but it will act as a supportive method for both class and objects.
+#We use @staticmethod as decorator.
+#Syntax for static method :-
+#class Cname:
+    #Block of code
+    #@staticmethod
+    #def mname(args):
+        #statement block
+#obj = Cname()
+
+#Static method example:- 
+class Boring:
+    name = "Rehman"
+    role = "Student"
+    @staticmethod
+    def nonsense(a,b):
+        print(a+b)
+st1 = Boring()
+Boring.nonsense(10,20)
+st1.nonsense(30,40)
+
+
+#Prog
+class Demo:
+    @staticmethod
+    def add(a,b):
+        print(a+b)
+Demo.add(10,20)
+
+#Why is this static method ?
+#Because it does not use object members.
+#Because it does not use class members.
+#Because it works independently.
+#--Static method is a normal helper function inside a class--
