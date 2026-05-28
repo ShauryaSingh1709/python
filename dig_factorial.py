@@ -6,3 +6,4 @@ while n > 0:
     print(digit, "=", factorial(digit))
 
     n //= 10
+
