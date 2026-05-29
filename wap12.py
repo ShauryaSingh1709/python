@@ -9,7 +9,6 @@ elif ch.isdigit():
 else:
     print("Character is a special character")
 
-
 #-----------------------Second method-----------------------
 ch = input("Enter a character: ")
 if 'A' <= ch <= 'Z':
