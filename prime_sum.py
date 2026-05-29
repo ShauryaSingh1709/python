@@ -1,22 +1,13 @@
-m = int(input("Enter start: "))
-n = int(input("Enter end: "))
+n = int(input("Enter number: "))
 
 total = 0
 
+while n > 0:
+    digit = n % 10
 
-def is_prime(num):
-    if num < 2:
-        return False
+    if digit in [2, 3, 5, 7]:
+        total += digit
 
-    for i in range(2, num):
-        if num % i == 0:
-            return False
+    n //= 10
 
-    return True
-
-
-for num in range(m, n + 1):
-    if is_prime(num):
-        total += num
-
-print("Prime Sum =", total)
+print("Prime Digit Sum =", total)
