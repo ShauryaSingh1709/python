@@ -217,6 +217,15 @@ class Demo:
         # .
         # self.argn = argn
 #Obj_name = Cname(arg1, arg2, arg3,.....argn)
+#There are two types of Constructor method in python.
+#1. Default/Non Parameterized Constructor
+#2. Parameterized Constructor
+#Arguments are actual values which are passed and value we pass while declaration of function is called parameters.
+#Formal arguments = Parameters
+#Actual arguments = Arguments
+#Default constructor is called when we create an object without passing any argument.
+#Parameterized constructor is called when we create an object by passing some argument.
+#Why we use self :- It is used to refer the address of the object/ refer the object members.
 
 class School:
     sname = "Carmel"
